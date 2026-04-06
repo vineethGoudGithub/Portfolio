@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api/portfolio',
+  baseURL: 'https://portfolio-1-89xt.onrender.com/api/portfolio',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -81,14 +81,14 @@ export const recommendProject = (interest, allProjects) => {
     });
     // Add bonus if title strongly matches
     if (textToSearch.includes(interest.toLowerCase())) score += 5;
-    
+
     if (score > maxScore) {
       maxScore = score;
       bestMatch = proj;
     }
   });
 
-  return maxScore > 0 ? bestMatch : allProjects[0]; 
+  return maxScore > 0 ? bestMatch : allProjects[0];
 };
 
 export default api;
