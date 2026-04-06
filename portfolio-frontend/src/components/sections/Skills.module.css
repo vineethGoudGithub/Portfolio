@@ -1,0 +1,234 @@
+.skillsSection {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* MARQUEE STYLES */
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 4rem;
+  padding: 1.5rem 0;
+  display: flex;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary) 0%, transparent 100%);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary) 0%, transparent 100%);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 3rem;
+  animation: scrollMarquee 30s linear infinite;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.marqueeIcon {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+}
+
+.marqueeName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Scrolls exactly one set */
+}
+
+/* GRID STYLES */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skillCategoryCard {
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.skillCategoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  position: relative;
+  display: inline-block;
+}
+
+.categoryTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 50%;
+  background: var(--gradient-glow);
+}
+
+.skillList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.skillIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pulsing animated gradient behind the icon */
+.skillIconWrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, var(--accent-primary) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  animation: spinGlow 4s linear infinite;
+}
+
+@keyframes spinGlow {
+  to { transform: rotate(360deg); }
+}
+
+.skillItem:hover .skillIconWrapper::before {
+  opacity: 0.3;
+}
+
+.icon {
+  font-size: 2.5rem; /* Noticeably larger icon size */
+  color: var(--text-primary);
+  display: flex;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.skillName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.skillItem:hover .skillIconWrapper {
+  border-color: var(--accent-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+}
+
+.skillItem:hover .icon {
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.skillItem:hover .skillName {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-5px); }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--text-secondary);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--accent-primary);
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

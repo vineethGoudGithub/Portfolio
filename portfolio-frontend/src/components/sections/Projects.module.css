@@ -1,0 +1,253 @@
+.projectsSection {
+  background: var(--bg-secondary);
+}
+
+.sectionTitle {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 350px;
+  gap: 2rem;
+}
+
+/* Make some cards take more space if wanted */
+@media (min-width: 1024px) {
+  .bentoGrid > div:nth-child(1) {
+    grid-column: span 2;
+  }
+}
+
+.projectCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.projectCard.highlighted {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+}
+
+.cardImageContainer {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0.8;
+}
+
+.imagePlaceholder h3 {
+  font-size: 4rem;
+  opacity: 0.3;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateZ(30px);
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.techStackSmall {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.techStackSmall span {
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 800px;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+@media (min-width: 768px) {
+  .modalContent {
+    flex-direction: row;
+    height: 500px;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.closeBtn:hover {
+  background: var(--accent-primary);
+}
+
+.modalImageContainer {
+  flex: 1;
+}
+
+.modalBody {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.modalBody h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modalDescription {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.techStackFull {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.techStackFull span {
+  font-size: 0.9rem;
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--text-primary);
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+}
+
+.modalLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.iconLink:hover {
+  color: var(--accent-primary);
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  color: var(--text-secondary);
+  gap: 1rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--accent-primary);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shortDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+

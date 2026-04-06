@@ -1,0 +1,187 @@
+.contactSection {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .contactContainer {
+    flex-direction: row;
+  }
+}
+
+.contactInfo {
+  flex: 1;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.contactInfo h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 1.5rem;
+}
+
+.contactInfo p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.infoDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+.infoItem a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.infoItem a:hover {
+  color: var(--accent-primary);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contactForm {
+  flex: 1.2;
+  padding: 3rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  padding: 1rem;
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.submitBtn {
+  background: var(--gradient-glow);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.errorMsg {
+  color: #ef4444;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.successIcon {
+  color: var(--accent-tertiary);
+  margin-bottom: 1.5rem;
+}
+
+.successMessage h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.successMessage p {
+  color: var(--text-secondary);
+}
+
+.inputError {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+}
+
+.errorText {
+  color: #ef4444;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
