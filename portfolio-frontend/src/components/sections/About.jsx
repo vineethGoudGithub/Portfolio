@@ -8,9 +8,8 @@ const About = () => {
     {
       type: 'edu',
       title: 'B.Tech in Computer Science',
-      org: 'University Name',
-      date: '2019 - 2023',
-      desc: 'Specialized in AI/ML and Software Engineering. Graduated with honors.'
+      org: 'JNTUH, Hyderabad',
+      desc: 'Computer Science and  Engineering. Graduated with honors.'
     }
   ];
 
