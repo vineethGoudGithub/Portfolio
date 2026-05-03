@@ -6,13 +6,6 @@ import { GraduationCap, Briefcase } from 'lucide-react';
 const About = () => {
   const experiences = [
     {
-      type: 'work',
-      title: 'Full Stack Developer',
-      org: 'Tech Innovators Inc.',
-      date: '2023 - Present',
-      desc: 'Building premium user interfaces and scaling Spring Boot backends for enterprise clients.'
-    },
-    {
       type: 'edu',
       title: 'B.Tech in Computer Science',
       org: 'University Name',

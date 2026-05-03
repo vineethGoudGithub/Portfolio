@@ -28,7 +28,7 @@ const AIChatbot = () => {
     } else if (q.includes('project') || q.includes('build')) {
       return "He has built several projects including an AI Financial Scorer, CareConnect Healthcare portal, and Anil Traders E-commerce app. Check out the Projects section!";
     } else if (q.includes('experience') || q.includes('work')) {
-      return "He has experience as a Full Stack Developer at Tech Innovators Inc., building scalable enterprise solutions.";
+      return "Vineeth is a passionate Software Engineer with a strong foundation in full-stack development. Check out the Journey section to see more!";
     } else if (q.includes('contact') || q.includes('hire') || q.includes('email')) {
       return "You can reach him via the Contact form on this site, or directly at vineeth@example.com.";
     } else if (q.includes('ai') || q.includes('machine learning')) {
