@@ -41,7 +41,7 @@ const Hero = () => {
               <a href="#projects" className={styles.primaryBtn}>
                 View Projects
               </a>
-              <a href="/resume.pdf" className={styles.secondaryBtn} target="_blank" rel="noreferrer">
+              <a href="/resume.pdf" className={styles.secondaryBtn} target="_blank" rel="noreferrer" download>
                 <Download size={18} />
                 Resume
               </a>

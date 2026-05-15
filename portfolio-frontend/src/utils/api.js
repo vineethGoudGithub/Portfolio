@@ -5,7 +5,7 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 5000,
+  timeout: 60000,
 });
 
 // Fallback data
@@ -60,10 +60,8 @@ export const submitContact = async (data) => {
     const res = await api.post('/contact', data);
     return res.data;
   } catch (error) {
-    console.warn("API Call Failed: Simulating Successful Contact Submission");
-    // Simulate network delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    return { id: 999, ...data, createdAt: new Date().toISOString() };
+    console.error("API Call Failed", error);
+    throw error;
   }
 };
 

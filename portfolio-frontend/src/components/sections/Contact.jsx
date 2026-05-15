@@ -61,8 +61,8 @@ const Contact = () => {
               <div className={styles.infoItem}>
                 <span className={styles.label}>Socials</span>
                 <div className={styles.socialLinks}>
-                  <a href="#">LinkedIn</a>
-                  <a href="#">GitHub</a>
+                  <a href="https://linkedin.com/in/vineeth-thallapally" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <a href="https://github.com/vineethGoudGithub" target="_blank" rel="noreferrer">GitHub</a>
                   <a href="#">Twitter</a>
                 </div>
               </div>

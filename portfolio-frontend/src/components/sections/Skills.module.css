@@ -216,6 +216,26 @@
   100% { transform: translateY(-5px); }
 }
 
+@media (max-width: 767px) {
+  .skillCategoryCard {
+    padding: 1.2rem;
+  }
+  .skillList {
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    gap: 1rem;
+  }
+  .skillIconWrapper {
+    width: 60px;
+    height: 60px;
+  }
+  .icon {
+    font-size: 2rem;
+  }
+  .skillName {
+    font-size: 0.8rem;
+  }
+}
+
 .loadingContainer {
   display: flex;
   justify-content: center;

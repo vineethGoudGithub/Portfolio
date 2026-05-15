@@ -9,7 +9,13 @@ const About = () => {
       type: 'edu',
       title: 'B.Tech in Computer Science',
       org: 'JNTUH, Hyderabad',
-      desc: 'Computer Science and  Engineering. Graduated with honors.'
+      desc: 'Computer Science and  Engineering. Graduated '
+    },
+    {
+      type: 'edu',
+      title: 'MTECH Computer Science And Engineering',
+      org: 'SRUniversity',
+      desc: 'Computer Science and engineering'
     }
   ];
 

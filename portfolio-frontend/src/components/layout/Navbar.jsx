@@ -45,8 +45,8 @@ const Navbar = () => {
             ))}
           </ul>
           <div className={styles.socialIcons}>
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/vineethGoudGithub" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/vineeth-thallapally" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
 
