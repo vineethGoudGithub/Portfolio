@@ -59,7 +59,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Technical <span className="text-gradient">Arsenal</span>
+          Technical <span className="text-gradient">Skills</span>
         </motion.h2>
 
         {loading ? (
