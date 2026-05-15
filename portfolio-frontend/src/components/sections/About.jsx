@@ -7,15 +7,15 @@ const About = () => {
   const experiences = [
     {
       type: 'edu',
-      title: 'B.Tech in Computer Science',
-      org: 'JNTUH, Hyderabad',
-      desc: 'Computer Science and  Engineering. Graduated '
-    },
-    {
-      type: 'edu',
       title: 'MTECH Computer Science And Engineering',
       org: 'SRUniversity',
       desc: 'Computer Science and engineering'
+    },
+    {
+      type: 'edu',
+      title: 'B.Tech in Computer Science',
+      org: 'JNTUH, Hyderabad',
+      desc: 'Bachelor of Technology in Computer Science and Engineering'
     }
   ];
 

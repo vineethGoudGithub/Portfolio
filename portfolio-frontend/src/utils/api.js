@@ -10,10 +10,10 @@ const api = axios.create({
 
 // Fallback data
 export const fallbackProjects = [
-  { id: 1, title: 'Employee Management System', description: 'A comprehensive system for managing employee records securely and efficiently.', techStack: ['Angular', 'Spring Boot'], githubLink: '#', liveLink: null, imageUrl: 'https://picsum.photos/seed/p1/800/600' },
-  { id: 2, title: 'E-Commerce Web Application', description: 'A rich e-commerce platform with secure JWT authentication and state-of-the-art UI.', techStack: ['React', 'Spring Boot', 'JWT'], githubLink: '#', liveLink: '#', imageUrl: 'https://picsum.photos/seed/p2/800/600' },
-  { id: 3, title: 'Delivery Management System', description: 'A scalable API-driven system designed to handle high-volume delivery operations.', techStack: ['Spring Boot APIs'], githubLink: '#', liveLink: null, imageUrl: 'https://picsum.photos/seed/p3/800/600' },
-  { id: 4, title: 'Heart Disease Prediction System', description: 'An intelligent predictive model assisting in early diagnosis of heart disease.', techStack: ['Machine Learning', 'Python'], githubLink: '#', liveLink: null, imageUrl: 'https://picsum.photos/seed/p4/800/600' }
+  { id: 1, title: 'Employee Management System', description: 'A comprehensive system for managing employee records securely and efficiently.', techStack: ['Angular', 'Spring Boot'], githubLink: '#', liveLink: null, imageUrl: '/projects/employee_management.png' },
+  { id: 2, title: 'E-Commerce Web Application', description: 'A rich e-commerce platform with secure JWT authentication and state-of-the-art UI.', techStack: ['React', 'Spring Boot', 'JWT'], githubLink: '#', liveLink: '#', imageUrl: '/projects/ecommerce_app.png' },
+  { id: 3, title: 'Delivery Management System', description: 'A scalable API-driven system designed to handle high-volume delivery operations.', techStack: ['Spring Boot APIs'], githubLink: '#', liveLink: null, imageUrl: '/projects/delivery_management.png' },
+  { id: 4, title: 'Heart Disease Prediction System', description: 'An intelligent predictive model assisting in early diagnosis of heart disease.', techStack: ['Machine Learning', 'Python'], githubLink: '#', liveLink: null, imageUrl: '/projects/heart_prediction.png' }
 ];
 
 export const fallbackSkills = [
